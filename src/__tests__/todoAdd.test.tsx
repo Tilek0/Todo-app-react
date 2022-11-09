@@ -2,8 +2,6 @@ import {fireEvent, render, screen} from "@testing-library/react";
 import TodoAdd from "../components/TodoAdd";
 import React, { useState } from "react";
 import userEvent from "@testing-library/user-event";
-import store from "../store";
-import {Provider} from "react-redux";
 
 describe('testing todoAdd page',() => {
     test('testing input and button element', () => {
