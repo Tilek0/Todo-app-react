@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 type BtnPropsType = {
     children: React.ReactNode
@@ -8,7 +8,7 @@ type BtnPropsType = {
     shadow?: string
 
 }
-const MyButton: React.FC<BtnPropsType> = ({
+const MyButton: React.FC<BtnPropsType> = memo(({
                                               children,
                                               px,
                                               py,
@@ -25,6 +25,6 @@ const MyButton: React.FC<BtnPropsType> = ({
             ease-in-out duration-300 ml-4 ${shadow}`}
         >{children}</button>
     );
-};
+});
 
 export default MyButton;

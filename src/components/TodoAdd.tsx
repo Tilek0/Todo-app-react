@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {memo} from 'react';
+
 import MyButton from "./UI/MyButton";
 
 interface TodoFormProps {
@@ -7,7 +8,7 @@ interface TodoFormProps {
     handleAction: () => void
 }
 
-const TodoAdd: React.FC<TodoFormProps> = ({text, updateText, handleAction}) => {
+const TodoAdd: React.FC<TodoFormProps> = memo(({text, updateText, handleAction}) => {
     return (
         <label className='flex justify-between mb-2 py-3 sticky'>
             <input
@@ -30,6 +31,6 @@ const TodoAdd: React.FC<TodoFormProps> = ({text, updateText, handleAction}) => {
             </MyButton>
         </label>
     );
-};
+});
 
 export default TodoAdd;
